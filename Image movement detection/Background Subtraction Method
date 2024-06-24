@@ -1,0 +1,27 @@
+import cv2
+
+# Image detection function
+
+def detect_movement_background_subtraction(image1, image2):
+    # Create background subtractor object
+    bg_subtractor = cv2.createBackgroundSubtractorMOG2()
+    
+    # Apply background subtraction to the images
+    fg_mask = bg_subtractor.apply(image1)
+    fg_mask = bg_subtractor.apply(image2)
+    
+    # Check if movement is detected
+    if cv2.countNonZero(fg_mask) > 0:
+        return "Movement detected"
+    else:
+        return "No movement detected"
+
+# REPLACE IMAGE PATHS WITH YOUR IMAGES
+
+image1 = cv2.imread('image_path.jpg')
+image2 = cv2.imread('image2_path.jpg')
+
+# Print results
+
+result = detect_movement_background_subtraction(image1, image2)
+print(result)
