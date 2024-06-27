@@ -1,0 +1,1 @@
+python3 ~/home/avraham/3d_print_error_detector/image-compare.py
