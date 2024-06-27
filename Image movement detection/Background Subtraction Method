@@ -3,7 +3,8 @@ import os
 
 # Image detection function
 
-def detect_movement_background_subtraction(image1, image2):
+# diff_percentage: how much pixels should be different (in %) to register that there was a movement. Use decimals
+def detect_movement_background_subtraction(image1, image2, diff_percentage):
     # Create background subtractor object
     bg_subtractor = cv2.createBackgroundSubtractorMOG2()
     
@@ -22,7 +23,7 @@ def detect_movement_background_subtraction(image1, image2):
     changed_pixels = cv2.countNonZero(fg_mask)
     
     # Check if movement is detected
-    if (changed_pixels / total_pixels) > .5:
+    if (changed_pixels / total_pixels) > diff_percentage:
         return "Movement detected"
     else:
         return "No movement detected"
@@ -34,7 +35,7 @@ image2 = cv2.imread('image2_path.jpg')
 
 # Print results
 
-result = detect_movement_background_subtraction(image1, image2)
+result = detect_movement_background_subtraction(image1, image2, .5)
 
 # REMOVE THESE LINES WHEN FINISHED SCRIPT, ONLY FOR TESTING
 
