@@ -1,3 +1,3 @@
-# change all file paths tp your file path
-# do not use this repo for actuall prints, only use it for experiements
+# change all file paths t0 your file path
+# Do not use this repo for actual prints, only use it for experiments
 All pull requests should go to https://github.com/T9Air/klipper-camera-watchdog 
