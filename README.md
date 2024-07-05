@@ -1,6 +1,6 @@
 # 3d_print_error_detector
 
-# I am switching this repo to a new one and will use this one as a test bed for updates. New repo: https://github.com/T9Air/klipper-camera-watchdog
+# THIS REPO IS DEPRECATED AND WILL NOT BE WORKED ON ANYMORE, THERE IS A NEW REPO AT https://github.com/T9Air/klipper-camera-watchdog
 
 Spaghetti detection and messed-up layer detection using images
 
